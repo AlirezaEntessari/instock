@@ -1,7 +1,7 @@
-function HomePage() {
+function WarehouseAdd() {
     return (
         <p>PlaceHolder Text</p>
     )
 }
 
-export default HomePage;
+export default WarehouseAdd;
