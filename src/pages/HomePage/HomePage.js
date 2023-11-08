@@ -1,6 +1,12 @@
+import './HomePage.scss'
+import WarehouseList from '../../components/WarehouseList/WarehouseList';
+
+
 function HomePage() {
     return (
-        <p>PlaceHolder Text</p>
+        <body>
+            <WarehouseList />
+        </body>
     )
 }
 
