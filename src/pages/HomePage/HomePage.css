@@ -1,1 +1,17 @@
-/*# sourceMappingURL=HomePage.css.map */
+@font-face {
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  src: url("../Fonts/Titillium_Web/TitilliumWeb-Regular.ttf");
+}
+@font-face {
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  src: url("../Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf");
+  font-weight: 600;
+}
+.body {
+  background-color: #FFFFFF;
+}
+
+.warehousescontainer {
+  width: 90vw;
+  background-color: #F7F8F9;
+}/*# sourceMappingURL=HomePage.css.map */

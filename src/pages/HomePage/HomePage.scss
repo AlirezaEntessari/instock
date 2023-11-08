@@ -1,0 +1,11 @@
+@use './../../styles/assets/partials/mixins' as *;
+@use './../../styles/assets/partials/fonts' as *;
+@use './../../styles/assets/partials/variables' as *;
+
+.body {
+    background-color: $instock-primary-3;
+}
+.warehousescontainer {
+    width: 90vw;
+    background-color: $instock-background-page;
+}

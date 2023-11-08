@@ -3,24 +3,61 @@
 @use './../../styles/assets/partials/variables' as *;
 
 .container {
+    width: 90vw;
+    margin: 0 auto 0 auto;
     border-top: 1px solid $instock-secondary-2;
     border-bottom: 1px solid $instock-secondary-2;
+    @include tablet {
+        border-top: none;
+    }
 }
 
 .warehouseContainer {
-    width: 90vw;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     margin: 1rem auto 1rem auto;
     gap: 1rem;
     line-height: 120%;
+    @include tablet {
+        gap: 1rem;
+        width: 85vw;
+    }
+    h4 {
+        @include tablet {
+            display: none;
+        }
+    }
     &__left {
         width: 40vw;
         display: flex;
         flex-direction: column;
         gap: .5rem;
+        @include tablet {
+            flex-direction: row;
+            height: 3rem;
+            align-items: center;
+            width: 35vw;
+            gap: 2rem;
+        }
+        &--start {
+            @include tablet {
+                width: 22vw;
+            }
+        }
         &--img {
             height: .9rem;
+            @include tablet {
+                float: right;
+                margin-top: .125rem;
+                margin-left: -2rem;
+                height: 1.2rem;
+            }
+        }
+        &--middle {
+            @include tablet {
+                width: 20vw;
+            }
         }
     }
     &__right {
@@ -28,30 +65,76 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
+        @include tablet {
+            flex-direction: row;
+            height: 3rem;
+            align-items: center;
+            width: 35vw;
+            gap: 2rem;
+        }
+        &--start {
+            @include tablet {
+                width: 25vw;
+            }
+        }
+        &--column {
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    &__far {
+        display: none;
+        @include tablet {
+            display: contents;
+        }
     }
 }
 
 .shrink {
     max-height: 1.5rem;
     max-width: 1.5rem;
+    @include tablet {
+        display: none;
+    }
 }
 .shrink2 {
     max-height: 1.5rem;
     max-width: 1.5rem;
     align-self: flex-end;
+    @include tablet {
+        display: none;
+    }
+}
+
+.shrink__hidden {
+    @include tablet {
+        padding-left: 1rem;
+    }
+}
+
+.shrink__hidden2 {
+    
 }
 
 h2 {
     margin: 0;
     font-size: .75rem;
-    font-weight: 400;
+    font-weight: 600;
     color: $instock-primary-2;
+    @include tablet {
+        font-size: .9rem;
+    }
 }
 
 h3 {
     margin: 0;
     font-size: .75rem;
     font-weight: 400;
+    @include tablet {
+        font-size: .9rem;
+    }
 }
 
 h4 {
