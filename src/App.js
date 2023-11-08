@@ -50,7 +50,7 @@ function App() {
         <Route path="/"
           element={<>
             <HomePage />
-            <button onClick={() => handleOpenModal(currentWarehouseObject)}>Open Delete Warehouse Modal</button>
+            <button onClick={() => handleOpenModal(currentWarehouse)}>Open Delete Warehouse Modal</button>
             <DeleteWarehouseModal
               open={isModalOpen}
               onClose={handleCloseModal}

@@ -1,6 +1,6 @@
 import React from 'react';
 import "../DeleteWarehouse/DeleteWarehouse.scss";
-import closeIcon from "../../styles/assets/InStock Assets/Icons/close-24px.svg";
+import closeIcon from "../../styles/assets/Icons/close-24px.svg";
 
 const Modal = ({ currentWarehouse, currentInventory, hideModal, displayModal, deleteWarehouse, deleteInventory }) => {
 
