@@ -1,11 +1,12 @@
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
-$brainflix-primary: #0095FF;
-$brainflix-primary-background: #FFFFFF;
-$brainflix-hover: #0065AD;
-$brainflix-primary-text: #323232; 
-$brainflix-component: #000000;
-$brainflix-secondary-text: #AFAFAF; 
-$brainflix-border: #E1E1E1; 
-$brainflix-secondary-background: #FAFAFA;
+$instock-primary: #13182C; // global text
+$instock-primary-2: #2E66E5; // interactive elements
+$instock-primary-3: #FFFFFF; // global
+$instock-secondary: #5C667E; // table column headers, placeholder text
+$instock-secondary-2: #BDC5D5; //outlines, dividers, borders, table sorting icon
+$instock-background-page: #F7F8F9; //  table column header 
+$instock-background-nav: #232940; // button hover state
+$instock-support: #158463; //  "in stock" label
+$instock-support-2: #C94515; // "out of stock" label, error states and delete icon
