@@ -1,0 +1,32 @@
+.warehouseContainer {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    &__left {
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+    }
+    &__right {
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.shrink {
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: .6rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: .5rem;
+}
