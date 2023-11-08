@@ -1,0 +1,58 @@
+.container {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.warehouseContainer {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto 1rem auto;
+  gap: 1rem;
+  line-height: 120%;
+}
+.warehouseContainer__left {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.warehouseContainer__left--img {
+  height: 0.9rem;
+}
+.warehouseContainer__right {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shrink {
+  max-height: 1.5rem;
+  max-width: 1.5rem;
+}
+
+.shrink2 {
+  max-height: 1.5rem;
+  max-width: 1.5rem;
+  align-self: flex-end;
+}
+
+h2 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: blue;
+}
+
+h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+h4 {
+  margin: 0;
+  font-size: 0.6rem;
+  color: grey;
+}/*# sourceMappingURL=WarehouseList.css.map */
