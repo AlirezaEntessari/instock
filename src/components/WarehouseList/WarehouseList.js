@@ -1,7 +1,7 @@
 import './WarehouseList.scss'
-import arrow from './../../styles/assets/InStock Assets/Icons/chevron_right-24px.svg';
-import del from './../../styles/assets/InStock Assets/Icons/delete_outline-24px.svg';
-import edit from './../../styles/assets/InStock Assets/Icons/edit-24px.svg';
+import arrow from './../../styles/assets/Icons/chevron_right-24px.svg';
+import del from './../../styles/assets/Icons/delete_outline-24px.svg';
+import edit from './../../styles/assets/Icons/edit-24px.svg';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 

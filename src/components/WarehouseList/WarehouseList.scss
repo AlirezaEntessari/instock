@@ -1,7 +1,10 @@
+@use './../../styles/assets/partials/mixins' as *;
+@use './../../styles/assets/partials/fonts' as *;
+@use './../../styles/assets/partials/variables' as *;
 
 .container {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid $instock-secondary-2;
+    border-bottom: 1px solid $instock-secondary-2;
 }
 
 .warehouseContainer {
@@ -42,7 +45,7 @@ h2 {
     margin: 0;
     font-size: .75rem;
     font-weight: 400;
-    color: blue;
+    color: $instock-primary-2;
 }
 
 h3 {
@@ -54,5 +57,5 @@ h3 {
 h4 {
     margin: 0;
     font-size: .6rem;
-    color: grey;
+    color: $instock-secondary;
 }
