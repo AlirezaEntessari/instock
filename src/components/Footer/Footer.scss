@@ -1,6 +1,12 @@
 @use "../../styles/assets/partials/mixins" as *;
 @use "../../styles/assets/partials/variables" as *;
 
+
+footer {
+    display: flex;
+    justify-content: center;
+}
 .footer__text {
     color: $instock-secondary;
+    text-align: center;
 }
