@@ -5,12 +5,10 @@ import HomePage from './pages/HomePage/HomePage';
 import InventoryAdd from './pages/InventoryAdd/InventoryAdd';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
 import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
-<<<<<<< HEAD
 import DeleteWarehouseModal from '../src/components/DeleteWarehouse/DeleteWarehouse';
-import './App.css';
-=======
+import './App.scss';
 import Header from './components/Header/Header';
->>>>>>> develop
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -49,16 +47,10 @@ function App() {
   };
 
   return (
-<<<<<<< HEAD
-    <BrowserRouter>
-      <Routes>
-        <Route path="/"
-=======
       <BrowserRouter>
       <Header />
         <Routes>
           <Route path="/"
->>>>>>> develop
           element={<>
             <HomePage />
             <button onClick={() => handleOpenModal(currentWarehouse)}>Open Delete Warehouse Modal</button>
@@ -93,6 +85,7 @@ function App() {
           </>}
         />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
