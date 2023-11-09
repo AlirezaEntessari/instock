@@ -27,11 +27,13 @@ function WarehouseSearch() {
                 <p>CONTACT NAME</p>
                 <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
                 </div>
-                <div className="warehousetopcontainer__lower--align-four">
+                <div className="warehousetopcontainer__lower--align--four">
                 <p>CONTACT INFORMATION</p>
                 <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
                 </div>
+                <div className="warehousetopcontainer__lower--align-five">
                 <p>ACTIONS</p>
+                </div>
             </div>
         </section>
     )

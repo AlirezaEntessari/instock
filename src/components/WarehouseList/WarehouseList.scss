@@ -44,7 +44,7 @@
             height: 4rem;
             align-items: center;
             width: 30vw;
-            justify-content: space-between;
+            gap: 20%;
             @include desktop {
                 width: 35vw;
             }
@@ -52,6 +52,8 @@
         &--start {
             @include tablet {
                 width: 10.5vw;
+                justify-content: center;
+                align-items: center;
             }
             &--align {
                 display: flex;
@@ -71,6 +73,8 @@
         &--middle {
             @include tablet {
                 width: 12.5vw;
+                justify-content: center;
+                align-items: center;
                 @include desktop {
                     width: 15vw;
                 }
@@ -92,8 +96,11 @@
         &--start {
             @include tablet {
                 width: 15vw;
+                justify-content: center;
+                align-items: center;
                 @include desktop {
                     width: 8vw;
+                    padding-left: .25rem;
                 }
             }
         }
@@ -106,6 +113,8 @@
         &--middle {
             @include tablet {
                 width: 17.5vw;
+                justify-content: center;
+                align-items: center;
                 @include desktop {
                     width: 15vw;
                 }
