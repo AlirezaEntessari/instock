@@ -1,10 +1,15 @@
 import './AddWarehouse.scss'
+import backarrow from './../../styles/assets/Icons/arrow_back-24px.svg';
 
 function AddWarehouse() {
 
 return (
     <section>
         <div className="containeradd">
+            <div className="containeradd__header">
+                <img src={backarrow} className="containeradd__header--img" alt="back" />
+                <h1>Add New Warehouse</h1>
+            </div>
             <div className="warehouseaddContainer">
                 <div className="warehouseaddContainer__left">
                     <p>Warehouse Details</p>
@@ -44,11 +49,11 @@ return (
                         <input type="text" className="warehouseaddContainer__box" placeholder='   Email'/>
                     </div>
                 </div>
-                <div className='warehouseaddContainer__buttons'>
+            </div>
+            <div className='warehouseaddContainer__buttons'>
                 <button type="submit" value="submit" className="warehouseaddContainer__buttons--white">Cancel</button>
                 <button type="submit" value="submit" className="warehouseaddContainer__buttons--blue">Add Warehouse</button>
                 </div>
-            </div>
         </div>
     </section>
     )
