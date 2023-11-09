@@ -15,19 +15,19 @@ function WarehouseSearch() {
                 <button className="warehousetopcontainer__button" input="submit">Add New Warehouse</button>
             </div>
             <div className="warehousetopcontainer__lower">
-                <div className="warehousetopcontainer__lower--align">
+                <div className="warehousetopcontainer__lower--align--one">
                 <p>WAREHOUSE</p>
                 <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
                 </div>
-                <div className="warehousetopcontainer__lower--align">
+                <div className="warehousetopcontainer__lower--align--two">
                 <p>ADDRESS</p>
                 <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
                 </div>
-                <div className="warehousetopcontainer__lower--align">
+                <div className="warehousetopcontainer__lower--align--three">
                 <p>CONTACT NAME</p>
                 <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
                 </div>
-                <div className="warehousetopcontainer__lower--align">
+                <div className="warehousetopcontainer__lower--align-four">
                 <p>CONTACT INFORMATION</p>
                 <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
                 </div>

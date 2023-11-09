@@ -18,6 +18,11 @@
     border-top: none;
   }
 }
+@media (min-width: 768px) and (min-width: 1280px) {
+  .container {
+    width: 80vw;
+  }
+}
 
 .warehouseContainer {
   width: 80vw;
@@ -29,8 +34,13 @@
 }
 @media (min-width: 768px) {
   .warehouseContainer {
-    gap: 1rem;
     width: 85vw;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehouseContainer {
+    width: 75vw;
   }
 }
 @media (min-width: 768px) {
@@ -47,31 +57,46 @@
 @media (min-width: 768px) {
   .warehouseContainer__left {
     flex-direction: row;
-    height: 3rem;
+    height: 4rem;
     align-items: center;
+    width: 30vw;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehouseContainer__left {
     width: 35vw;
-    gap: 2rem;
   }
 }
 @media (min-width: 768px) {
   .warehouseContainer__left--start {
-    width: 22vw;
+    width: 10.5vw;
   }
 }
+.warehouseContainer__left--start--align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
 .warehouseContainer__left--img {
-  height: 0.9rem;
+  height: 1rem;
 }
 @media (min-width: 768px) {
   .warehouseContainer__left--img {
     float: right;
     margin-top: 0.125rem;
-    margin-left: -2rem;
     height: 1.2rem;
   }
 }
 @media (min-width: 768px) {
   .warehouseContainer__left--middle {
-    width: 20vw;
+    width: 12.5vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehouseContainer__left--middle {
+    width: 15vw;
   }
 }
 .warehouseContainer__right {
@@ -83,21 +108,36 @@
 @media (min-width: 768px) {
   .warehouseContainer__right {
     flex-direction: row;
-    height: 3rem;
+    height: 4rem;
     align-items: center;
-    width: 35vw;
-    gap: 2rem;
+    width: 37.5vw;
+    justify-content: space-between;
   }
 }
 @media (min-width: 768px) {
   .warehouseContainer__right--start {
-    width: 25vw;
+    width: 15vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehouseContainer__right--start {
+    width: 8vw;
   }
 }
 @media (min-width: 768px) {
   .warehouseContainer__right--column {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .warehouseContainer__right--middle {
+    width: 17.5vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehouseContainer__right--middle {
+    width: 15vw;
   }
 }
 .warehouseContainer__far {
@@ -107,6 +147,12 @@
   .warehouseContainer__far {
     display: contents;
   }
+}
+.warehouseContainer__far--align {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-left: 2rem;
 }
 
 .shrink {
@@ -127,12 +173,6 @@
 @media (min-width: 768px) {
   .shrink2 {
     display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .shrink__hidden {
-    padding-left: 1rem;
   }
 }
 

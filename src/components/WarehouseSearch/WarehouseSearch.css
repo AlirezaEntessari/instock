@@ -23,6 +23,11 @@
     width: 85vw;
   }
 }
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehousetopcontainer {
+    width: 75vw;
+  }
+}
 .warehousetopcontainer__bar {
   width: 80vw;
   margin: 0 auto 0 auto;
@@ -73,8 +78,17 @@
     width: 85vw;
     margin: 0 auto 0 auto;
   }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .warehousetopcontainer__lower {
+    width: 75vw;
+  }
+}
+@media (min-width: 768px) {
   .warehousetopcontainer__lower p {
     font-size: 0.75rem;
+    color: #5C667E;
+    font-weight: 600;
   }
 }
 @media (min-width: 768px) {
@@ -91,10 +105,47 @@
     gap: 0.25rem;
   }
 }
+@media (min-width: 768px) {
+  .warehousetopcontainer__lower--align--one {
+    width: 10.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .warehousetopcontainer__lower--align--two {
+    width: 12.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .warehousetopcontainer__lower--align--three {
+    width: 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .warehousetopcontainer__lower--align--four {
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 h1 {
   margin-top: 2rem;
   margin-bottom: 0;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   h1 {

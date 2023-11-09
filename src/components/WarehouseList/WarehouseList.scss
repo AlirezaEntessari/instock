@@ -9,6 +9,9 @@
     border-bottom: 1px solid $instock-secondary-2;
     @include tablet {
         border-top: none;
+        @include desktop {
+            width: 80vw;
+        }
     }
 }
 
@@ -20,8 +23,11 @@
     gap: 1rem;
     line-height: 120%;
     @include tablet {
-        gap: 1rem;
         width: 85vw;
+        justify-content: space-between;
+        @include desktop {
+            width: 75vw;
+        }
     }
     h4 {
         @include tablet {
@@ -35,28 +41,39 @@
         gap: .5rem;
         @include tablet {
             flex-direction: row;
-            height: 3rem;
+            height: 4rem;
             align-items: center;
-            width: 35vw;
-            gap: 2rem;
+            width: 30vw;
+            justify-content: space-between;
+            @include desktop {
+                width: 35vw;
+            }
         }
         &--start {
             @include tablet {
-                width: 22vw;
+                width: 10.5vw;
+            }
+            &--align {
+                display: flex;
+                flex-direction: row;
+                align-items: center; 
+                gap: .25rem;
             }
         }
         &--img {
-            height: .9rem;
+            height: 1rem;
             @include tablet {
                 float: right;
                 margin-top: .125rem;
-                margin-left: -2rem;
                 height: 1.2rem;
             }
         }
         &--middle {
             @include tablet {
-                width: 20vw;
+                width: 12.5vw;
+                @include desktop {
+                    width: 15vw;
+                }
             }
         }
     }
@@ -67,14 +84,17 @@
         gap: .5rem;
         @include tablet {
             flex-direction: row;
-            height: 3rem;
+            height: 4rem;
             align-items: center;
-            width: 35vw;
-            gap: 2rem;
+            width: 37.5vw;
+            justify-content: space-between;
         }
         &--start {
             @include tablet {
-                width: 25vw;
+                width: 15vw;
+                @include desktop {
+                    width: 8vw;
+                }
             }
         }
         &--column {
@@ -83,11 +103,25 @@
                 flex-direction: column;
             }
         }
+        &--middle {
+            @include tablet {
+                width: 17.5vw;
+                @include desktop {
+                    width: 15vw;
+                }
+            }
+        }
     }
     &__far {
         display: none;
         @include tablet {
             display: contents;
+        }
+        &--align {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            padding-left: 2rem;
         }
     }
 }
@@ -106,16 +140,6 @@
     @include tablet {
         display: none;
     }
-}
-
-.shrink__hidden {
-    @include tablet {
-        padding-left: 1rem;
-    }
-}
-
-.shrink__hidden2 {
-    
 }
 
 h2 {
