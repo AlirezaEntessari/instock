@@ -6,8 +6,10 @@ import WarehouseSearch from '../../components/WarehouseSearch/WarehouseSearch';
 function HomePage() {
     return (
         <body>
+            <section className='warehousescontainer'>
             <WarehouseSearch />
             <WarehouseList />
+            </section>
         </body>
     )
 }
