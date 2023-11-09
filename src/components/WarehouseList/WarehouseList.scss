@@ -19,11 +19,13 @@
     width: 80vw;
     display: flex;
     flex-direction: row;
-    margin: 1rem auto 1rem auto;
+    margin: 1rem auto 0 auto;
     gap: 1rem;
     line-height: 120%;
+    border-bottom: 1px solid $instock-secondary-2;
+    padding-bottom: 1rem;
     @include tablet {
-        width: 85vw;
+        width: 80vw;
         justify-content: space-between;
         @include desktop {
             width: 75vw;
