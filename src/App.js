@@ -1,5 +1,4 @@
 //fixing
-import './App.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
@@ -7,6 +6,7 @@ import InventoryAdd from './pages/InventoryAdd/InventoryAdd';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
 import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
 import Header from './components/Header/Header';
+import './App.scss';
 
 function App() {
   return (
