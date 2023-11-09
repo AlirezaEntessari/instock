@@ -1,5 +1,6 @@
 import "./Header.scss"
 import Logo from "../../styles/assets/Logo/InStock-Logo_1x.png"
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
