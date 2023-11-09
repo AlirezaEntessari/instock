@@ -90,6 +90,9 @@
             width: 40vw;
             gap: 1.5rem;
             padding-left: 1.5rem;
+            @include desktop {
+                padding-left: 2rem;
+            }
         }
     }
     &__box {
@@ -111,6 +114,9 @@
         @include tablet {
             justify-content: flex-end;
             margin-top: 1rem;
+            @include desktop {
+                padding-right: 1rem;
+            }
         }
         &--white {
             width: 37.5vw;
@@ -123,6 +129,9 @@
             font-size: .7rem;
             @include tablet {
                 width: 10vw;
+                @include desktop {
+                    width: 5vw;
+                }
             }
         }
         &--blue {
@@ -135,6 +144,9 @@
             font-size: .7rem;
             @include tablet {
                 width: 17.5vw;
+                @include desktop {
+                    width: 10vw;
+                }
             }
         }
     }
