@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage/HomePage';
 import InventoryAdd from './pages/InventoryAdd/InventoryAdd';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
 import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
-import DeleteWarehouseModal from '../src/components/DeleteWarehouse/DeleteWarehouse';
+// import DeleteWarehouseModal from '../src/components/DeleteWarehouse/DeleteWarehouse';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -54,11 +54,11 @@ function App() {
           element={<>
             <HomePage />
             <button onClick={() => handleOpenModal(currentWarehouse)}>Open Delete Warehouse Modal</button>
-            <DeleteWarehouseModal
+            {/* <DeleteWarehouseModal
               open={isModalOpen}
               onClose={handleCloseModal}
               onDelete={handleDeleteWarehouse}
-            />
+            /> */}
           </>}
         />
         <Route path="/warehouses/:id"
