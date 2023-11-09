@@ -1,9 +1,37 @@
+@use "../../styles/assets/partials/mixins" as *;
+@use "../../styles/assets/partials/variables" as *; 
+
+
 .navbar__container {
-    background-color: #232940;
+    background-color: $instock-background-nav;
     display: flex;
     flex-direction: column;
+    @include  tablet {
+        height: 5.3125rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navbar__logo {
+    display: flex;
+    justify-content: center;
+    @include tablet {
+        margin-top: 1.875rem;
+        margin-left: 1.5625rem;
+    }
 }
 .navbar__pages {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    @include tablet {
+        width: 15.625rem;
+        margin-top: .9375rem;
+        justify-content: space-around;
+    }
+}
+.navbar__page-1 {
+    text-decoration: none;
+}
+.navbar__page-1:hover {
+    text-decoration: underline;
 }
