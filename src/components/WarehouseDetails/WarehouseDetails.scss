@@ -1,0 +1,62 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.warehouse-details {
+
+    &__header--title {
+        display: flex;
+
+        &__h1 {
+            padding-right: 100px;
+        }
+
+        // &__img {
+        //     opacity: 100%;
+        // }
+
+        &__div {
+            margin-top: 24px;
+            background-color: blue;
+            width: 48px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+
+    &__table {
+        display: none;
+    }
+
+
+}
+
+@include tablet {
+
+    .warehouse-details {
+
+        &__mobile {
+            display: none;
+        }
+
+        &__table {
+           display: contents;
+        }
+
+    }
+
+}
+
+@include desktop {
+
+    .warehouse-details {
+
+        
+
+    }
+
+}
+
