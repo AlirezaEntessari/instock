@@ -6,14 +6,14 @@ const Header = () => {
         <header className="navbar">
             <nav className="navbar__container">
                 <Link to="/">
-                <div className="navbar__logo"> src={Logo} </div>
+                    <div className="navbar__logo"> src={Logo} </div>
                 </Link>
                 <div className="navbar__pages">
                     <Link>
-                    <div className="navbar__page-1"><p>Warehouses</p></div>
+                        <div className="navbar__page-1"><p>Warehouses</p></div>
                     </Link>
-                    <Link>
-                    <div className="navbar__page-2"><p>Inventory</p></div>
+                    <Link to="/inventory">
+                        <div className="navbar__page-2"><p>Inventory</p></div>
                     </Link>
                 </div>
             </nav>
