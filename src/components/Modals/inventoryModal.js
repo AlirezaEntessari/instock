@@ -3,6 +3,44 @@ import "./Modal.scss";
 import XButton from "../../styles/assets/Icons/close-24px.svg";
 
 const InventoryModal = (props) => {
+    const handleDelete = async () => {
+        try {
+            const response = await fetch(`/api/inventories/${props.selectedItemId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.status === 204) {
+                props.delete();
+                await deleteDataFromSeedFile(props.selectedItemId);
+            }
+
+            props.handleClose();
+        } catch (error) {
+            console.error('Error deleting inventory item:', error);
+        }
+    };
+
+    const deleteDataFromSeedFile = async (itemId) => {
+        try {
+            const { default: seedData } = await import('../seeds/02_inventories');
+
+            const updatedSeedData = seedData.filter(item => item.id !== itemId);
+
+            const fs = require('fs');
+            const path = require('path');
+
+            const seedFilePath = path.resolve(__dirname, '../seeds/02_inventories.js');
+            fs.writeFileSync(seedFilePath, `module.exports = ${JSON.stringify(updatedSeedData, null, 2)};`);
+
+            console.log('Seed data updated successfully.');
+        } catch (error) {
+            console.error('Error updating seed data:', error);
+        }
+    };
+
     return (
         <>
             <div className="modal">
@@ -15,7 +53,7 @@ const InventoryModal = (props) => {
                     <button className="modal-cancel button" onClick={props.handleClose}>
                         Cancel
                     </button>
-                    <button className="modal-delete button" onClick={props.delete}>
+                    <button className="modal-delete button" onClick={handleDelete}>
                         Delete
                     </button>
                     <div onClick={props.closeModal}>
