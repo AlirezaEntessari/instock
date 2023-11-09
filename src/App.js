@@ -4,8 +4,8 @@ import axios from 'axios';
 import HomePage from './pages/HomePage/HomePage';
 import InventoryAdd from './pages/InventoryAdd/InventoryAdd';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
-import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
 import Header from './components/Header/Header';
+import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);

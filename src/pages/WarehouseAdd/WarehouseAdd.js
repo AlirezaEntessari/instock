@@ -1,6 +1,12 @@
+import AddWarehouse from "../../components/AddWarehouse/AddWarehouse";
+import Header from "../../components/Header/Header";
+
 function WarehouseAdd() {
     return (
-        <p>PlaceHolder Text</p>
+        <body>
+            <Header />
+            <AddWarehouse />
+        </body>
     )
 }
 
