@@ -1,7 +1,9 @@
 @use "../../styles/assets/partials/mixins" as *;
 @use "../../styles/assets/partials/variables" as *; 
 
-
+a {
+    text-decoration: none;
+}
 .navbar__container {
     background-color: $instock-background-nav;
     display: flex;
@@ -27,7 +29,9 @@
 .navbar__pages {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: .625rem;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 13px;
     @include tablet {
         width: 15.625rem;
         margin-top: .9375rem;
@@ -37,6 +41,26 @@
         margin-right: 4.375rem;
     }
 }
+.navbar__page-1, .navbar__page-2 {
+    color: $instock-primary-3;
+    background-color: $instock-background-nav;
+    border: none;
+}
 .navbar__page-1:hover {
     text-decoration: underline;
+}
+.navbar__page-2:hover {
+    text-decoration: underline;
+}
+.navbar__page-1:focus {
+    border-radius: 1.25rem;
+    background-color: $instock-primary;
+    width: 6.25rem;
+    height: 1.875rem;
+}
+.navbar__page-2:focus {
+    border-radius: 1.25rem;
+    background-color: $instock-primary;
+    width: 6.25rem;
+    height: 1.875rem;
 }

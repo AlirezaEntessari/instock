@@ -11,10 +11,10 @@ const Header = () => {
                 </Link>
                 <div className="navbar__pages">
                     <Link>
-                        <div className="navbar__page-1"><p>Warehouses</p></div>
+                        <div><button className="navbar__page-1">Warehouses</button></div>
                     </Link>
                     <Link to="/inventory">
-                        <div className="navbar__page-2"><p>Inventory</p></div>
+                        <div><button className="navbar__page-2">Inventory</button></div>
                     </Link>
                 </div>
             </nav>
