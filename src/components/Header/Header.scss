@@ -1,0 +1,9 @@
+.navbar__container {
+    background-color: $instock-background-nav;
+    display: flex;
+    flex-direction: column;
+}
+.navbar__pages {
+    display: flex;
+    justify-content: space-between;
+}
