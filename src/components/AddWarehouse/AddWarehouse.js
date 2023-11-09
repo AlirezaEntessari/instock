@@ -1,4 +1,5 @@
 import './AddWarehouse.scss'
+
 function AddWarehouse() {
 
 return (
@@ -42,6 +43,10 @@ return (
                         <h3>Email</h3>
                         <input type="text" className="warehouseaddContainer__box" placeholder='   Email'/>
                     </div>
+                </div>
+                <div className='warehouseaddContainer__buttons'>
+                <button type="submit" value="submit" className="warehouseaddContainer__buttons--white">Cancel</button>
+                <button type="submit" value="submit" className="warehouseaddContainer__buttons--blue">Add Warehouse</button>
                 </div>
             </div>
         </div>
