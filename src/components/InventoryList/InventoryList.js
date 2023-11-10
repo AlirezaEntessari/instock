@@ -64,7 +64,7 @@ const InventoryList = ( { inventories }) => {
                     <div className="inventoryContainer__right">
                         <div className="inventoryContainer__right--start">
                             <h4>STATUS</h4>
-                            <h3 className="iventoryItem">{inventory.status}</h3>
+                            <button className="iventoryItem">{inventory.status}</button>
                         </div>
                         <div className="inventoryContainer__right--middle">
                             <h4>QUANTITY</h4>

@@ -334,8 +334,13 @@ h3 {
     }
 }
 .iventoryItem {
+    color: $instock-support;
+    border-radius: 25px;
     @include tablet {
-    padding-left: 1.6875rem;
+    padding-left: .3125rem;
+    width: 4.0625rem;
+    height: 1.875rem;
+    margin-left: .9375rem;
     }
 }
 .iventoryItem--2 {
