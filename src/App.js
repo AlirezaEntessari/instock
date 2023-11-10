@@ -7,7 +7,9 @@ import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import { WarehouseDetails } from './components/WarehouseDetails/WarehouseDetails';
+import EditWarehouse from './components/EditWarehouse/EditWarehouse';
+import WarehousePage from './pages/WarehousePage/WarehousePage';
+
 
 function App() {
   return (
@@ -18,12 +20,17 @@ function App() {
           element={<>
             <HomePage />
           </>}/>
-          <Route path="/warehouses/:id"
+          <Route path="/warehouses/:warehouseId"
           element={<>
+          <WarehousePage/>
           </>}/>
           <Route path="/warehouses/add"
           element={<>
           <WarehouseAdd />
+          </>}/>
+          <Route path="/warehouses/edit"
+          element={<>
+          <EditWarehouse />
           </>}/>
           <Route path="/inventory"
           element={<>
