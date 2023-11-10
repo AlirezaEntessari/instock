@@ -337,10 +337,16 @@ h3 {
     @include tablet {
     padding-left: 2.1875rem;
     }
+    @include desktop {
+        padding-left: 6.25rem;
+    }
 }
 .iventoryItem--3 {
     @include tablet {
-    padding-left: 1.25rem;
+        padding-left: 1.25rem;
+    }
+    @include desktop {
+        padding-left: 4.375rem;
     }
 }
 
