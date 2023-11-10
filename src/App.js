@@ -7,21 +7,37 @@ import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import { WarehouseDetails } from './components/WarehouseDetails/WarehouseDetails';
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/warehouses/:id" element={<></>} />
-        <Route path="/warehouses/add" element={<WarehouseAdd />} />
-        <Route path="/inventory" element={<InventoryPage />} />
-        <Route path="/inventory/:id" element={<></>} />
-        <Route path="/inventory/add" element={<InventoryAdd />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+        <Routes>
+          <Route path="/"
+          element={<>
+            <HomePage />
+          </>}/>
+          <Route path="/warehouses/:id"
+          element={<>
+          </>}/>
+          <Route path="/warehouses/add"
+          element={<>
+          <WarehouseAdd />
+          </>}/>
+          <Route path="/inventory"
+          element={<>
+          <InventoryPage />
+          </>}/>
+          <Route path="/inventory/:id"
+          element={<>
+          </>}/>
+          <Route path="/inventory/add"
+          element={<>
+          <InventoryAdd />
+          </>}/>
+          </Routes>
+      </BrowserRouter>
   );
 }
 

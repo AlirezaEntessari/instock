@@ -1,3 +1,4 @@
+import { WarehouseDetails } from "../../components/WarehouseDetails/WarehouseDetails"
 import './HomePage.scss'
 import WarehouseList from '../../components/WarehouseList/WarehouseList';
 import WarehouseSearch from '../../components/WarehouseSearch/WarehouseSearch';

@@ -1,0 +1,140 @@
+@use '../../styles/assets/partials/fonts' as *;
+@use '../../styles/assets//partials/mixins' as *;
+@use '../../styles/assets/partials/variables' as *;
+
+.warehouse-details {
+
+    &__header--title {
+        display: flex;
+        border-bottom: 1px solid $instock-secondary-2;
+        padding-bottom: 24px;
+
+        &__h1 {
+            padding-left: 32px;
+        }
+
+        &__img {
+            position: absolute;
+            left: 459px;
+            top: 138px;
+            background-color: #FFFFFF;
+        }
+
+        &__div {
+            margin-top: 24px;
+            background-color: $instock-primary-2;
+            width: 52px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 200px;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+
+    &__table {
+        display: none;
+    }
+
+    &__information {
+        padding-top: 24px;
+        padding-left: 24px;
+        border-bottom: 1px solid $instock-secondary-2;
+    }
+
+    &__information--address {
+        padding-bottom: 36px;
+    }
+
+    &__information--table {
+        border-collapse: separate;
+        border-spacing: 24px;
+        font-weight: 400;
+    }
+
+    &__mobile {
+        td {
+            padding: 24px;
+        }
+    }
+
+    &__mobile-row {
+        margin-left: 24px;
+        border-bottom: 1px solid $instock-secondary-2;
+    }
+
+    &__mobile-table {
+        border-collapse: separate;
+        // border-spacing: 24px;
+        border-spacing: 12px;
+        font-weight: 400;
+    }   
+
+    &__mobile--trash-icon {
+        padding-left: 20px;
+    }
+
+    // &__arrow {
+       
+    // }
+
+    &__in-stock {
+        background-color: rgb(213, 231, 213);
+        border-radius: 12px;
+        color: $instock-support;
+    }
+
+    &__out-of-stock {
+        background-color: rgb(241, 213, 213);
+        border-radius: 12px;
+        color: $instock-support-2;
+    }
+
+    &__mobile--footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__mobile--edit-icon {
+        position: absolute;
+        right: 72px;
+    }
+
+  
+
+
+  
+
+   
+}
+
+@include tablet {
+
+    .warehouse-details {
+
+        &__mobile {
+            display: none;
+        }
+
+        &__table {
+           display: contents;
+        }
+
+        
+
+    }
+
+}
+
+@include desktop {
+
+    .warehouse-details {
+
+        
+
+    }
+
+}
+
