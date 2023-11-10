@@ -8,7 +8,7 @@ return (
     <section>
         <div className="containeradd">
             <div className="containeradd__header">
-            <Link to="/"><img src={backarrow} className="containeradd__header--img" alt="back" /></Link>
+                <Link to="/"><img src={backarrow} className="containeradd__header--img" alt="back" /></Link>
                 <h1>Add New Warehouse</h1>
             </div>
             <div className="warehouseaddContainer">

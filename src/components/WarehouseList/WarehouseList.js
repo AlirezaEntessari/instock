@@ -2,7 +2,7 @@ import './WarehouseList.scss'
 import arrow from './../../styles/assets/Icons/chevron_right-24px.svg';
 import del from './../../styles/assets/Icons/delete_outline-24px.svg';
 import edit from './../../styles/assets/Icons/edit-24px.svg';
-
+import { Link } from 'react-router-dom';
 function WarehouseList( { warehouses } ) {
     return (
         <section>
@@ -14,7 +14,7 @@ function WarehouseList( { warehouses } ) {
                         <div className="warehouseContainer__left--start">
                             <h4>WAREHOUSE</h4>
                             <div div className="warehouseContainer__left--start--align">
-                            <h2>{warehouse.warehouse_name}</h2>
+                            <Link to={`/warehouses/${warehouse.id}`}><h2>{warehouse.warehouse_name}</h2></Link>
                             <img src={arrow} alt='arrow' className="warehouseContainer__left--img"/>
                             </div>
                         </div>
