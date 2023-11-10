@@ -333,19 +333,9 @@ h3 {
         font-size: .9rem;
     }
 }
-.iventoryItem {
-    color: $instock-support;
-    border-radius: 25px;
-    @include tablet {
-    padding-left: .3125rem;
-    width: 4.0625rem;
-    height: 1.875rem;
-    margin-left: .9375rem;
-    }
-}
 .iventoryItem--2 {
     @include tablet {
-    padding-left: 2.8125rem;
+    padding-left: 2.1875rem;
     }
 }
 .iventoryItem--3 {
@@ -358,4 +348,28 @@ h4 {
     margin: 0;
     font-size: .6rem;
     color: $instock-secondary;
+}
+.inventory-item__status--instock {
+    color: $instock-support;
+    border-radius: 25px;
+    background-color: rgba(21, 132, 99, 0.1);
+    border: none;
+    font-weight: 600;
+    @include tablet {
+        padding-left: .3125rem;
+        width: 4.375rem;
+        height: 1.875rem;
+        }
+}
+.inventory-item__status--outstock {
+    color: $instock-support-2;
+    border-radius: 25px;
+    background-color: rgba(201, 69, 21, 0.1);
+    border: none;
+    font-weight: 600;
+    @include tablet {
+        padding-left: .3125rem;
+        width: 6.25rem;
+        height: 1.875rem;
+        }
 }
