@@ -1,0 +1,148 @@
+@use './../../styles/assets/partials/mixins' as *;
+@use './../../styles/assets/partials/fonts' as *;
+@use './../../styles/assets/partials/variables' as *;
+
+.warehousetopcontainer {
+    width: 80vw;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+        margin-top: 2rem;
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 1.5rem;
+        @include tablet {
+            font-size: 2rem;
+            margin-top: 0;
+            padding-right: 5rem;
+        }
+    }    
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1rem;
+        width: 80vw;
+        padding-top: 1.5rem;
+        gap: 1rem;
+        @include desktop {
+            width: 75vw;
+        }
+    }
+    &__bar {
+        width: 80vw;
+        margin: 0 auto 0 auto;
+        height: 1.5rem;
+        border-radius: 1rem;
+        border-color: $instock-secondary-2;
+        background-image: url(./../../styles/assets/Icons/search-24px.svg);
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+        @include tablet {
+            width: 22.5vw;
+            height: 2.25rem;
+            border-radius: 1.25rem;
+        }
+    }
+    &__button {
+        width: 82.5vw;
+        margin: 0 auto 0 auto;
+        height: 2rem;
+        color: $instock-primary-3;
+        border-radius: 1rem;
+        border: none;
+        background-color: $instock-primary-2;
+        font-size: .75rem;
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-bottom: 0;
+            width: 18vw;
+            height: 2.5rem;
+            border-radius: 1.25rem;
+            margin-left: -1rem;
+            background-position: 2% 50%;
+            @include desktop {
+                background-position: 20% 50%;
+            }
+        }
+    }
+    &__lower {
+        display: none;
+        @include tablet {
+            display: contents;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 79vw;
+            margin: 0 auto 0 auto;
+            @include desktop {
+                width: 75vw;
+            }
+            p {
+                font-size: .75rem;
+                color: $instock-secondary;
+                font-weight: 600;
+            }
+        }
+        &--img {
+            @include tablet {
+                height: 1rem;
+            }
+        }
+        &--align {
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: .25rem;
+            }
+            &--one {
+                @include tablet {
+                    width: 10.5vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    @include desktop {
+                        justify-content: flex-start;
+                    }
+                }
+            }
+            &--two {
+                @include tablet {
+                    width: 12.5vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }    
+            }
+            &--three {
+                @include tablet {
+                    width: 15vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    @include desktop {
+                        width: 12.5vw;
+                        padding-left: 2rem;
+                    }
+                }    
+            }
+            &--four {
+                @include tablet {
+                    width: 22.5vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }   
+            }
+        }
+    }
+}
+

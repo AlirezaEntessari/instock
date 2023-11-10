@@ -1,6 +1,10 @@
+import AddWarehouse from "../../components/AddWarehouse/AddWarehouse";
+
 function WarehouseAdd() {
     return (
-        <p>PlaceHolder Text</p>
+        <body>
+            <AddWarehouse />
+        </body>
     )
 }
 
