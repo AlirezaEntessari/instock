@@ -74,14 +74,14 @@
             display: contents;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content:space-around;
             width: 79vw;
             margin: 0 auto 0 auto;
             @include desktop {
                 width: 75vw;
             }
             p {
-                font-size: .75rem;
+                font-size: .5625rem;
                 color: $instock-secondary;
                 font-weight: 600;
             }
@@ -140,7 +140,16 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                }   
+                }
+            }    
+            &--five {
+                 @include tablet {
+                    width: 22.5vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    }      
             }
         }
     }

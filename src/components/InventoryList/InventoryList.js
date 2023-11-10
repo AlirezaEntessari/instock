@@ -25,7 +25,7 @@ const InventoryList = ( { inventories }) => {
                     <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
                 </div>
                 <div className="inventorytopcontainer__lower--align--three">
-                    <p>CONTACT STATUS</p>
+                    <p>STATUS</p>
                     <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
                 </div>
                 <div className="inventorytopcontainer__lower--align--four">
