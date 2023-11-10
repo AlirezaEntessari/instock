@@ -36,7 +36,7 @@ const InventoryList = ( { inventories }) => {
                     <p>WAREHOUSE</p>
                     <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
                 </div>
-                <div className="inventorytopcontainer__lower--align-five">
+                <div className="inventorytopcontainer__lower--align--six">
                     <p>ACTIONS</p>
                 </div>
             </div>
@@ -64,15 +64,15 @@ const InventoryList = ( { inventories }) => {
                     <div className="inventoryContainer__right">
                         <div className="inventoryContainer__right--start">
                             <h4>STATUS</h4>
-                            <h3>{inventory.status}</h3>
+                            <h3 className="iventoryItem">{inventory.status}</h3>
                         </div>
                         <div className="inventoryContainer__right--middle">
                             <h4>QUANTITY</h4>
-                            <h3>{inventory.quantity}</h3>
+                            <h3 className="iventoryItem--2">{inventory.quantity}</h3>
                         </div>
                         <div className="inventoryContainer__right--middle">
                             <h4>WAREHOUSE</h4>
-                            <h3>{inventory.warehouse_name}</h3>
+                            <h3 className="iventoryItem--3">{inventory.warehouse_name}</h3>
                         </div>
                             <img src={edit} alt="edit" className='shrink2'/>
                     </div>
