@@ -1,6 +1,28 @@
+import InventoryList from "../../components/InventoryList/InventoryList"
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 function InventoryPage() {
+    const [ inventories, setInventories ] = useState(null);
+    
+    useEffect(() => {
+      const getInventories = async () => {
+          try {
+              const response = await axios.get(`http://localhost:8080/api/inventories`);
+              const info = response.data;
+              setInventories(info);
+          } catch (error) {
+          console.log(error);
+          }
+      };
+      getInventories();
+  }, []);
     return (
-        <p>PlaceHolder Text</p>
+    
+        <body>
+            <InventoryList inventories={inventories} />
+        </body>
+    
     )
 }
 
