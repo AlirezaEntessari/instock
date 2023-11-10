@@ -3,7 +3,7 @@ import arrow from './../../styles/assets/Icons/chevron_right-24px.svg';
 import del from './../../styles/assets/Icons/delete_outline-24px.svg';
 import edit from './../../styles/assets/Icons/edit-24px.svg';
 
-function WarehouseList( {warehouses} ) {
+function WarehouseList( { warehouses } ) {
     return (
         <section>
             <div className="container">
