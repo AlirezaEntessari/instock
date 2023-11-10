@@ -10,29 +10,33 @@ const InventoryList = ( { inventories }) => {
     return (
 <>
         <section>
-            <div className="warehousetopcontainer">
+            <div className="inventorytopcontainer">
                 <h1>Inventory</h1>
-                <input type="text" img className="warehousetopcontainer__bar" placeholder='   Search...'/>
-                <Link to="/warehouses/add"><button className="warehousetopcontainer__button" input="submit">+ Add New Item</button></Link>
+                <input type="text" img className="inventorytopcontainer__bar" placeholder='   Search...'/>
+                <Link to="/inventory/add"><button className="inventorytopcontainer__button" input="submit">+ Add New Item</button></Link>
             </div>
-            <div className="warehousetopcontainer__lower">
-                <div className="warehousetopcontainer__lower--align--one">
+            <div className="inventorytopcontainer__lower">
+                <div className="inventorytopcontainer__lower--align--one">
+                    <p>INVENTORY ITEM</p>
+                    <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
+                </div>
+                <div className="inventorytopcontainer__lower--align--two">
+                    <p>CATEGORY ITEM</p>
+                    <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
+                </div>
+                <div className="inventorytopcontainer__lower--align--three">
+                    <p>CONTACT STATUS</p>
+                    <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
+                </div>
+                <div className="inventorytopcontainer__lower--align--four">
+                    <p>QTY</p>
+                    <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
+                </div>
+                <div className="inventorytopcontainer__lower--align--five">
                     <p>WAREHOUSE</p>
-                    <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
+                    <img src={sort} alt="sort" className="inventorytopcontainer__lower--img"/>
                 </div>
-                <div className="warehousetopcontainer__lower--align--two">
-                    <p>ADDRESS</p>
-                    <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
-                </div>
-                <div className="warehousetopcontainer__lower--align--three">
-                    <p>CONTACT NAME</p>
-                    <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
-                </div>
-                <div className="warehousetopcontainer__lower--align--four">
-                    <p>CONTACT INFORMATION</p>
-                    <img src={sort} alt="sort" className="warehousetopcontainer__lower--img"/>
-                </div>
-                <div className="warehousetopcontainer__lower--align-five">
+                <div className="inventorytopcontainer__lower--align-five">
                     <p>ACTIONS</p>
                 </div>
             </div>
