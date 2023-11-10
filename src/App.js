@@ -1,11 +1,11 @@
 import './App.css';
-import { HomePage } from './pages/HomePage/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import InventoryAdd from './pages/InventoryAdd/InventoryAdd';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
 import WarehouseAdd from './pages/WarehouseAdd/WarehouseAdd';
 import Header from './components/Header/Header';
+import { WarehouseDetails } from './components/WarehouseDetails/WarehouseDetails';
 
 function App() {
   return (
@@ -34,6 +34,8 @@ function App() {
           element={<>
           <InventoryAdd />
           </>}/>
+          <Route path="/warehouses/details" 
+          element={<WarehouseDetails/>} />
           </Routes>
       </BrowserRouter>
   );
