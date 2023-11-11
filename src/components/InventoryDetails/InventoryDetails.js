@@ -32,35 +32,35 @@ function InventoryDetails(  ) {
     return (
         <section>
             <div className="container">
-                {warehouse && (
-                <div key={inventory.id} className="warehouseContainer">
-                    <div className="warehouseContainer__left">
-                        <div className="warehouseContainer__left--start">
+                {inventory && (
+                <div key={inventory.id} className="inventoryContainer">
+                    <div className="inventoryContainer__left">
+                        <div className="inventoryContainer__left--start">
                             <h4>WAREHOUSE</h4>
-                            <div div className="warehouseContainer__left--start--align">
-                            <h2>{warehouse.warehouse_name}</h2>
-                            <img src={arrow} alt='arrow' className="warehouseContainer__left--img"/>
+                            <div div className="inventoryContainer__left--start--align">
+                            <h2>{inventory.inventory_name}</h2>
+                            <img src={arrow} alt='arrow' className="inventoryContainer__left--img"/>
                             </div>
                         </div>
-                        <div className="warehouseContainer__left--middle">
+                        <div className="inventoryContainer__left--middle">
                             <h4>ADDRESS</h4>
-                            <h3>{warehouse.address}</h3>
+                            <h3>{inventory.address}</h3>
                         </div>
                             <img src={del} alt="delete" className='shrink'/>
                     </div>
-                    <div className="warehouseContainer__right">
-                        <div className="warehouseContainer__right--start">
+                    <div className="inventoryContainer__right">
+                        <div className="inventoryContainer__right--start">
                             <h4>CONTACT NAME</h4>
-                            <h3>{warehouse.contact_name}</h3>
+                            <h3>{inventory.contact_name}</h3>
                         </div>
-                        <div className="warehouseContainer__right--middle">
+                        <div className="inventoryContainer__right--middle">
                             <h4>CONTACT INFORMATION</h4>
-                            <h3>{warehouse.phone}{warehouse.contact_email}</h3>
+                            <h3>{inventory.phone}{inventory.contact_email}</h3>
                         </div>
                             <img src={edit} alt="edit" className='shrink2'/>
                     </div>
-                    <div className="warehouseContainer__far">
-                        <div className="warehouseContainer__far--align">
+                    <div className="inventoryContainer__far">
+                        <div className="inventoryContainer__far--align">
                             <img src={del} alt="delete" className='shrink__hidden'/>
                             <img src={edit} alt="edit" className='shrink2__hidden'/>
                         </div>
