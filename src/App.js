@@ -44,6 +44,7 @@ function App() {
           <InventoryAdd />
           </>}/>
           </Routes>
+        <Footer />
       </BrowserRouter>
   );
 }
