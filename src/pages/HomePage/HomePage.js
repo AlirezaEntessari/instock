@@ -20,7 +20,7 @@ function HomePage() {
       };
       getWarehouses();
   }, []);
-  console.log(warehouses);
+
     return (
         <body>
             <section className='warehousescontainer'>
