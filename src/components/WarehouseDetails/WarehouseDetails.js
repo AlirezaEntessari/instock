@@ -1,313 +1,75 @@
-import './WarehouseDetails.scss';
-import TrashIcon from '../../styles/assets/Icons/delete_outline-24px.svg';
-import EditIcon from '../../styles/assets/Icons/edit-24px.svg';
-import ArrowBack from '../../styles/assets/Icons/arrow_back-24px.svg';
-import RightArrow from '../../styles/assets/Icons/chevron_right-24px.svg';
+import './WarehouseDetails.scss'
+import arrow from './../../styles/assets/Icons/chevron_right-24px.svg';
+import del from './../../styles/assets/Icons/delete_outline-24px.svg';
+import edit from './../../styles/assets/Icons/edit-24px.svg';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export const WarehouseDetails = () => {
+function WarehouseDetails(  ) {
+
+    const [ warehouse, setWarehouse ] = useState(null);
+
+    const { warehouseId } = useParams();
+    console.log(warehouseId);
+     
+    useEffect(() => {
+      const getWarehouse = async (warehouseId) => {
+          try {
+              const response = await axios.get(`http://localhost:8080/api/warehouses/${warehouseId || 1}`);
+              const info = response.data[0];
+              setWarehouse(info);
+              console.log(info);
+          } catch (error) {
+          console.log(error);
+          }
+      };
+      getWarehouse(warehouseId);
+  }, [warehouseId]);
+
+
 
     return (
-        <>
-            <div className="warehouse-details">
-                <div className="warehouse-details__header">
-                    <div className="warehouse-details__header--title">
-                        <h1 className='warehouse-details__header--title__h1'> <span><img src={ArrowBack} alt="Arrow Back"/></span> Washington</h1>
-                        <img className='warehouse-details__header--title__img' src={EditIcon} alt="Edit Icon" />
-                        <div className='warehouse-details__header--title__div'></div>
-                        <button className='warehouse-details__header--title__button'>Edit</button>
+        <section>
+            <div className="container">
+                {warehouse && (
+                <div key={warehouse.id} className="warehouseContainer">
+                    <div className="warehouseContainer__left">
+                        <div className="warehouseContainer__left--start">
+                            <h4>WAREHOUSE</h4>
+                            <div div className="warehouseContainer__left--start--align">
+                            <h2>{warehouse.warehouse_name}</h2>
+                            <img src={arrow} alt='arrow' className="warehouseContainer__left--img"/>
+                            </div>
+                        </div>
+                        <div className="warehouseContainer__left--middle">
+                            <h4>ADDRESS</h4>
+                            <h3>{warehouse.address}</h3>
+                        </div>
+                            <img src={del} alt="delete" className='shrink'/>
+                    </div>
+                    <div className="warehouseContainer__right">
+                        <div className="warehouseContainer__right--start">
+                            <h4>CONTACT NAME</h4>
+                            <h3>{warehouse.contact_name}</h3>
+                        </div>
+                        <div className="warehouseContainer__right--middle">
+                            <h4>CONTACT INFORMATION</h4>
+                            <h3>{warehouse.phone}{warehouse.contact_email}</h3>
+                        </div>
+                            <img src={edit} alt="edit" className='shrink2'/>
+                    </div>
+                    <div className="warehouseContainer__far">
+                        <div className="warehouseContainer__far--align">
+                            <img src={del} alt="delete" className='shrink__hidden'/>
+                            <img src={edit} alt="edit" className='shrink2__hidden'/>
+                        </div>
                     </div>
                 </div>
-                <div className="warehouse-details__information">
-                    <div className="warehouse-details__information--address">
-                        <h3>WAREHOUSE ADDRESS: </h3>
-                        <p>33 Pearl Street SW, Washington, USA</p>
-                    </div>
-                    <div className="warehouse-details__information--table-container">
-                        <table className='warehouse-details__information--table'>
-                            <tr className='warehouse-details__information--table-row'>
-                                <td>CONTACT NAME: </td>
-                                <td>CONTACT INFORMATION: </td>
-                            </tr>
-                            <tr>
-                                <td>Graeme Lyon</td>
-                                <td>+1 (647) 504-0911</td>
-                            </tr>
-                            <tr>
-                                <td>Warehouse Manager</td>
-                                <td>glyon@instock.com</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div className='warehouse-details__mobile'>
-                    <div className="warehouse-details__mobile-row">
-                        <table className='warehouse-details__mobile-table'>
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Television <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>CATEGORY</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Electronics</td>
-                                <td>500</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                            
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className='warehouse-details__mobile-table'>
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Gym Bag <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__out-of-stock'>OUT OF STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>Category</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Gear</td>
-                                <td>0</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className='warehouse-details__mobile-table'>
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Hoodie <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__out-of-stock'>OUT OF STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>Category</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Apparel</td>
-                                <td>0</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className='warehouse-details__mobile-table'>
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Keychain <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>CATEGORY</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Accessories</td>
-                                <td>2000</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className='warehouse-details__mobile-table'>
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Shampoo <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>CATEGORY</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Health</td>
-                                <td>4350</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className="warehouse-details__mobile-table">
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Phone Charger <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>CATEGORY</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Electronics</td>
-                                <td>10000</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className="warehouse-details__mobile-table">
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Tent <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>CATEGORY</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Gear</td>
-                                <td>800</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-                    <div className="warehouse-details__mobile-row">
-                        <table className="warehouse-details__mobile-table">
-                            <tr>
-                                <td>INVENTORY ITEM</td>
-                                <td>STATUS</td>
-                            </tr>
-                            <tr>
-                                <td>Winter Jacket <img className='warehouse-details__arrow' src={RightArrow} alt="Right Arrow" /></td>
-                                <td><button className='warehouse-details__out-of-stock'>OUT OF STOCK</button></td>
-                            </tr>
-                            <tr>
-                                <td>CATEGORY</td>
-                                <td>QTY</td>
-                            </tr>
-                            <tr>
-                                <td>Apparel</td>
-                                <td>0</td>
-                            </tr>
-                            <div className='warehouse-details__mobile--footer'>
-                                <img className='warehouse-details__mobile--trash-icon' src={TrashIcon} alt="Trash Icon" />
-                                <img className='warehouse-details__mobile--edit-icon' src={EditIcon} alt="Edit Icon" />
-                            </div>
-                        </table>
-                    </div>
-
-
-                </div>
-                <div className="warehouse-details__container">
-                   <table className='warehouse-details__table'>
-                        <tr>
-                            <td>INVENTORY ITEM</td>
-                            <td>CATEGORY</td>
-                            <td>STATUS</td>
-                            <td>QUANTITY</td>
-                            <td>ACTIONS</td>
-                        </tr>
-                        <tr>
-                            <td>Television</td>
-                            <td>Electronics</td>
-                            <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            <td>500</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Gym Bag</td>
-                            <td>Gear</td>
-                            <td><button>OUT OF STOCK</button></td>
-                            <td>0</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Hoodie</td>
-                            <td>Apparel</td>
-                            <td><button>OUT OF STOCK</button></td>
-                            <td>0</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Keychain</td>
-                            <td>Accessories</td>
-                            <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            <td>2000</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Shampoo</td>
-                            <td>Health</td>
-                            <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            <td>4350</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Phone Charger</td>
-                            <td>Electronics</td>
-                            <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            <td>10000</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Tent</td>
-                            <td>Gear</td>
-                            <td><button className='warehouse-details__in-stock'>IN STOCK</button></td>
-                            <td>800</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                        <tr>
-                            <td>Winter Jacket</td>
-                            <td>Apparel</td>
-                            <td><button>OUT OF STOCK</button></td>
-                            <td>0</td>
-                            <td><span><img src={TrashIcon} alt="Trash Icon" /></span> <span><img src={EditIcon} alt="Edit Icon" /></span></td>
-                        </tr>
-                   </table>
-                </div>
+                )}
             </div>
-
-        
-        
-        </>
+        </section>
     )
-
 }
+
+export default WarehouseDetails;

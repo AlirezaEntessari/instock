@@ -3,7 +3,7 @@ import sort from './../../styles/assets/Icons/sort-24px.svg';
 import { Link } from 'react-router-dom';
 
 function WarehouseSearch() {
-
+    
     return (
         <section>
             <div className="warehousetopcontainer">

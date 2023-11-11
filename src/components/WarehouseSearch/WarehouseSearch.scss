@@ -44,6 +44,7 @@
             width: 22.5vw;
             height: 2.25rem;
             border-radius: 1.25rem;
+            margin: 0 1.25rem 0 auto;
         }
     }
     &__button {
@@ -65,6 +66,8 @@
             background-position: 2% 50%;
             @include desktop {
                 background-position: 20% 50%;
+                font-size: 1rem;
+                width: 16vw;
             }
         }
     }
