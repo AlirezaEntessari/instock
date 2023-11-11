@@ -1,6 +1,7 @@
 import InventoryList from "../../components/InventoryList/InventoryList"
 import { useEffect, useState } from "react";
 import axios from "axios";
+import InventoryDetails from "../../components/InventoryDetails/InventoryDetails";
 
 function InventoryPage() {
     const [ inventories, setInventories ] = useState(null);
@@ -21,6 +22,7 @@ function InventoryPage() {
     
         <body>
             <InventoryList inventories={inventories} />
+            <InventoryDetails />
         </body>
     
     )
