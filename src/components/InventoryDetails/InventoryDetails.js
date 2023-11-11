@@ -23,7 +23,7 @@ function InventoryDetails() {
                 console.log(error);
             }
         };
-        getInventory(inventoryId);
+        getInventory();
     }, [inventoryId]);
 
     return (
