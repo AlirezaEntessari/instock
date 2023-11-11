@@ -30,7 +30,7 @@ function InventoryDetails() {
         <section>
             <div className="inventory-container__top">
                 <img src={arrow} alt='arrow' />
-                <h2>{inventory.inventory_name}</h2>
+                <h2>{inventory.item_name}</h2>
             </div>
             <div className="inventory-container__button">
                 <button src={edit}></button>

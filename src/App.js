@@ -15,37 +15,37 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-        <Routes>
-          <Route path="/"
+      <Routes>
+        <Route path="/"
           element={<>
             <HomePage />
-          </>}/>
-          <Route path="/warehouses/:warehouseId"
+          </>} />
+        <Route path="/warehouses/:warehouseId"
           element={<>
-          <WarehousePage/>
-          </>}/>
-          <Route path="/warehouses/add"
+            <WarehousePage />
+          </>} />
+        <Route path="/warehouses/add"
           element={<>
-          <WarehouseAdd />
-          </>}/>
-          <Route path="/warehouses/edit"
+            <WarehouseAdd />
+          </>} />
+        <Route path="/warehouses/edit"
           element={<>
-          <EditWarehouse />
-          </>}/>
-          <Route path="/inventory"
+            <EditWarehouse />
+          </>} />
+        <Route path="/inventory"
           element={<>
-          <InventoryPage />
-          </>}/>
-          <Route path="/inventory/:id"
+            <InventoryPage />
+          </>} />
+        <Route path="/inventory/:id"
           element={<>
-          </>}/>
-          <Route path="/inventory/add"
+          </>} />
+        <Route path="/inventory/add"
           element={<>
-          <InventoryAdd />
-          </>}/>
-          </Routes>
-        <Footer />
-      </BrowserRouter>
+            <InventoryAdd />
+          </>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
