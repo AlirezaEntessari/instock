@@ -51,7 +51,7 @@ const InventoryList = ( { inventories }) => {
                         <div className="inventoryContainer__left--start">
                             <h4>Inventory</h4>
                             <div div className="inventoryContainer__left--start--align">
-                            <h2>{inventory.item_name}</h2>
+                            <Link to={`/inventory/${inventory.id}`}><h2>{inventory.item_name}</h2></Link>
                             <img src={arrow} alt='arrow' className="inventoryContainer__left--img"/>
                             </div>
                         </div>
