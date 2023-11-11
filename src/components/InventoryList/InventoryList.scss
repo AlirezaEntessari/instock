@@ -79,6 +79,7 @@
             margin: 0 auto 0 auto;
             @include desktop {
                 width: 75vw;
+                justify-content:flex-start;
             }
             p {
                 font-size: .75rem;
@@ -118,6 +119,10 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
+                }
+                @include desktop {
+                    padding-left: 2.5rem;
+                    padding-right: 2.1875rem;
                 }    
             }
             &--three {
@@ -129,7 +134,7 @@
                     align-items: center;
                     @include desktop {
                         width: 12.5vw;
-                        padding-left: 2rem;
+                        padding-right: 4.375rem;
                     }
                 }    
             }
@@ -141,6 +146,10 @@
                     justify-content: center;
                     align-items: center;
                 }
+                @include desktop {
+                    padding-left: .625rem;
+                    padding-right: 7.8125rem;
+                }
             }    
             &--five {
                  @include tablet {
@@ -149,7 +158,11 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    }      
+                    }
+                @include desktop {
+                    padding-left: .3125rem;
+                    padding-right: 4.0625rem;
+                }          
             }
             &--six {
                 @include tablet {
