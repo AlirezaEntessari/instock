@@ -22,7 +22,6 @@ function InventoryPage() {
     
         <body>
             <InventoryList inventories={inventories} />
-            <InventoryDetails />
         </body>
     
     )
