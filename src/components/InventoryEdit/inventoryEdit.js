@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./InventoryEdit.scss"
+import "./InventoryEdit.scss";
 import { Link } from "react-router-dom";
 import backIcon from "../../styles/assets/Icons/arrow_back-24px.svg";
 import errorIcon from "../../styles/assets/Icons/error-24px.svg";
 
-const InventoryEdit = (props) => {
+const InventoryEdit = ({ id }) => {
     const [itemData, setItemData] = useState(null);
     const [warehouseID, setWarehouseID] = useState("");
     const [warehouseName, setWarehouseName] = useState("");
@@ -17,7 +17,7 @@ const InventoryEdit = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/inventory/`)
+            .get(`http://localhost:8080/inventory/${id}`)
             .then((res) => {
                 const item = res.data;
                 setItemData(item);
@@ -32,7 +32,7 @@ const InventoryEdit = (props) => {
             .catch((err) => {
                 console.log(err);
             });
-    }, [props.match.params.id]);
+    }, [id]);
 
     const handleNameChange = (e) => {
         setItemName(e.target.value);
@@ -43,12 +43,6 @@ const InventoryEdit = (props) => {
     };
 
     const handleWarehouseChange = (e) => {
-        props.warehouseNames.forEach((warehouse) => {
-            if (warehouse.id === e.target.value) {
-                setWarehouseID(e.target.value);
-                setWarehouseName(warehouse.name);
-            }
-        });
     };
 
     const handleCategoryChange = (e) => {
@@ -61,34 +55,7 @@ const InventoryEdit = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (itemName === "" || description === "" || quantity === "") {
-            alert("Please fill in all the required fields!!!");
-        } else if (quantity < 1) {
-            alert("Quantity should be greater than 0");
-        } else {
-            axios
-                .put(`http://localhost:8080/inventory/`, {
-                    warehouseID,
-                    warehouseName,
-                    itemName,
-                    description,
-                    category,
-                    status,
-                    quantity,
-                })
-                .then((res) => {
-                    props.history.push("/inventory");
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
-        }
     };
-
-    if (!itemData) {
-        return <h1 className="loading">Loading...</h1>;
-    }
-
     return (
         <form className="inventory-edit" onSubmit={handleSubmit}>
             <div className="inventory-edit__heading">
@@ -158,7 +125,11 @@ const InventoryEdit = (props) => {
                                 onChange={handleCategoryChange}
                                 className="inventory-edit__select-input inventory-edit__category"
                             >
-                                {/* Your category options here */}
+                                <option value="Electronics">Electronics</option>
+                                <option value="Gear">Gear</option>
+                                <option value="Apparel">Apparel</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Health">Health</option>
                             </select>
                         </label>
                     </div>
@@ -212,6 +183,15 @@ const InventoryEdit = (props) => {
                             >
                                 {/* Your warehouse options here */}
                             </select>
+                        </label>
+                        <label className="inventory-edit__form-label">
+                            Warehouse Name
+                            <input
+                                type="text"
+                                value={warehouseName}
+                                readOnly
+                                className="inventory-edit__text-input inventory-edit__warehouse-name"
+                            />
                         </label>
                     </div>
                 </div>

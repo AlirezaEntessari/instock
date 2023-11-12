@@ -78,8 +78,12 @@ const InventoryList = ({ inventories }) => {
                                 </div>
                                 <div className="inventoryContainer__far">
                                     <div className="inventoryContainer__far--align">
-                                        <img src={del} alt="delete" className='shrink__hidden' />
-                                        <img src={edit} alt="edit" className='shrink2__hidden' />
+                                        <Link to={`/inventory/${inventory.id}`}>
+                                            <img src={del} alt="delete" className='shrink__hidden' />
+                                        </Link>
+                                        <Link to={`/inventory/${inventory.id}`}>
+                                            <img src={edit} alt="edit" className='shrink2__hidden' />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
