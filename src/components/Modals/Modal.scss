@@ -1,5 +1,5 @@
-@import "../../Styles/Partials/mixins";
-@import "../../Styles/Partials/variables";
+@import "../../Styles/assets/Partials/mixins";
+@import "../../Styles/assets/Partials/variables";
 @import "../../styles/assets/partials/fonts";
 
 .modal {
@@ -87,7 +87,6 @@
     position: relative;
     top: 24.5rem;
     left: 0.5rem;
-    font-family: $Avenir;
     color: $instock-secondary;
     padding: 0.5rem 3.25rem;
     border: 1px solid $instock-secondary-2;
@@ -105,7 +104,6 @@
 .modal-delete.button {
     position: relative;
     top: 24.5rem;
-    font-family: $Avenir;
     left: 1rem;
     background-color: $instock-support-2;
     color: $instock-primary-3;

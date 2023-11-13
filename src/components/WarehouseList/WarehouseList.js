@@ -2,6 +2,7 @@ import './WarehouseList.scss'
 import arrow from './../../styles/assets/Icons/chevron_right-24px.svg';
 import del from './../../styles/assets/Icons/delete_outline-24px.svg';
 import edit from './../../styles/assets/Icons/edit-24px.svg';
+import WarehouseModal from '../Modals/WarehouseModal';
 import { Link } from 'react-router-dom';
 function WarehouseList( { warehouses } ) {
     return (
