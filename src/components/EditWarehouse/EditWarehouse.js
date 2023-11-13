@@ -1,5 +1,8 @@
 import './EditWarehouse.scss'
 import backarrow from './../../styles/assets/Icons/arrow_back-24px.svg';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function EditWarehouse() {
 
@@ -8,14 +11,14 @@ return (
         <div className="containeradd">
             <div className="containeradd__header">
                 <img src={backarrow} className="containeradd__header--img" alt="back" />
-                <h1>Add New Warehouse</h1>
+                <h1>Edit Warehouse</h1>
             </div>
             <div className="warehouseaddContainer">
                 <div className="warehouseaddContainer__left">
                     <p>Warehouse Details</p>
                     <div>
                         <h3>Warehouse Name</h3>
-                        <input type="text" className="warehouseaddContainer__box"  placeholder='   Warehouse Name'/>
+                        <input type="text" className="warehouseaddContainer__box"  placeholder={warehouse.warehouse_name}/>
                     </div>
                     <div>
                         <h3>Street Address</h3>
