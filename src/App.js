@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import EditWarehouse from './components/EditWarehouse/EditWarehouse';
 import WarehousePage from './pages/WarehousePage/WarehousePage';
+import InventoryDetails from './components/InventoryDetails/InventoryDetails';
 
 
 function App() {
@@ -37,8 +38,7 @@ function App() {
             <InventoryPage />
           </>} />
         <Route path="/inventory/:id"
-          element={<>
-          </>} />
+          element={<><InventoryDetails /></>} />
         <Route path="/inventory/add"
           element={<>
             <InventoryAdd />

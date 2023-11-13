@@ -15,8 +15,8 @@ function InventoryDetails() {
     useEffect(() => {
         const getInventory = async (inventoryId) => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/inventories/${inventoryId || 1}`);
-                const info = response.data[0];
+                const response = await axios.get(`http://localhost:8080/api/inventories/${inventoryId || 1}`);
+                const info = response.data;
                 setInventory(info);
                 console.log(info);
             } catch (error) {
