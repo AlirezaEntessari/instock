@@ -46,6 +46,9 @@
     flex-direction: column;
     margin-left: 2.5rem;
     }
+    @include desktop {
+        margin-right: 9.375rem;
+    }
 }
 .inventory-container__descript {
     margin-top: 15px;
@@ -55,6 +58,9 @@
         margin-left: 1.875rem;
         margin-right: 12.5rem;
         margin-top: 1.875rem;
+    }
+    @include desktop {
+        margin-right: 25rem;
     }
 }
 .inventory-container__cat {
@@ -81,6 +87,12 @@
     }
 }
 .inventory-container__hide {
+    @include tablet {
+        display: none;
+    }
+}
+.inventory-container__hide--1 {
+    margin-bottom: 1.25rem;
     @include tablet {
         display: none;
     }
