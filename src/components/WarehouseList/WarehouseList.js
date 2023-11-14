@@ -4,6 +4,9 @@ import del from './../../styles/assets/Icons/delete_outline-24px.svg';
 import edit from './../../styles/assets/Icons/edit-24px.svg';
 import { Link } from 'react-router-dom';
 function WarehouseList( { warehouses } ) {
+    const handleDelete = () => {
+      };
+    
     return (
         <section>
             <div className="container">
@@ -37,8 +40,8 @@ function WarehouseList( { warehouses } ) {
                     </div>
                     <div className="warehouseContainer__far">
                         <div className="warehouseContainer__far--align">
-                            <img src={del} alt="delete" className='shrink__hidden'/>
-                            <img src={edit} alt="edit" className='shrink2__hidden'/>
+                            <img src={del} alt="delete" className='shrink__hidden' onClick={() => handleDelete(warehouse)}/>
+                            <Link to={`/warehouses/edit/${warehouse.id}`}><img src={edit} alt="edit" className='shrink2__hidden'/></Link>
                         </div>
                     </div>
                 </div>

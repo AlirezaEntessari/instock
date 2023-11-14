@@ -1,6 +1,7 @@
+import AddInventory from '../../components/AddInventory/AddInventory';
 function InventoryAdd() {
     return (
-        <p>PlaceHolder Text</p>
+        <AddInventory />
     )
 }
 
