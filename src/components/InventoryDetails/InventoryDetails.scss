@@ -22,10 +22,18 @@
     display: flex;
     justify-content: space-between;
     background-color: $instock-primary-3;
+    @include tablet {
+        justify-content: start;
+        height: 12.5rem;
+    }
 }
 .inventory-container__main--two {
     display: flex;
     flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        margin-top: 1.5625rem;
+    }
 }
 .inventory-container__right {
     display: none;
@@ -38,6 +46,11 @@
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    @include tablet {
+        margin-left: 1.875rem;
+        margin-right: 15.625rem;
+        margin-top: 1.875rem;
+    }
 }
 .inventory-container__cat {
     margin-top: 1.25rem;
@@ -51,8 +64,16 @@
 }
 .inventory-container__qty {
     margin-top: 5.625rem;
+    @include tablet {
+        margin-top: 0;
+        margin-left: 3.125rem;
+    }
 }
-.inventory-container__hide
+.inventory-container__hide {
+    @include tablet {
+        display: none;
+    }
+}
 .top__text {
     font-size: 1.5rem;
     margin-top: .3125rem;
