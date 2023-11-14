@@ -12,6 +12,9 @@
     display: flex;
     margin-top: 1.875rem;
     margin-bottom: .9375rem;
+    @include tablet{
+        margin-left: 1.25rem;
+    }
 }
 .inventory-container__top--two {
     margin-top: 1.875rem;
@@ -33,13 +36,15 @@
     @include tablet {
         flex-direction: row;
         margin-top: 1.5625rem;
+        border-left: 1px solid $instock-secondary;
     }
 }
 .inventory-container__right {
     display: none;
     @include tablet {
-        display: flex;
+    display: flex;
     flex-direction: column;
+    margin-left: 2.5rem;
     }
 }
 .inventory-container__descript {
@@ -48,16 +53,22 @@
     flex-direction: column;
     @include tablet {
         margin-left: 1.875rem;
-        margin-right: 15.625rem;
+        margin-right: 12.5rem;
         margin-top: 1.875rem;
     }
 }
 .inventory-container__cat {
     margin-top: 1.25rem;
     margin-bottom: 1.5625rem;
+    @include tablet {
+        margin-top: 4.6875rem;
+    }
 }
 .inventory-container__status {
     margin-bottom: 1.5625rem;
+    @include tablet {
+        margin-bottom: 4.375rem;
+    }
 }
 .inventory-container__ware {
     margin-bottom: 1.5625rem;
@@ -89,4 +100,7 @@ button {
     color: $instock-primary-3;
     width: 4.375rem;
     height: 1.875rem;
+    @include tablet {
+        margin-right: 1.875rem;
+    }
 }
