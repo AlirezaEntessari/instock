@@ -18,7 +18,7 @@ function WarehouseAdd() {
     const formSubmitHandler = async (e, warehouseName, streetAddress, city, country, contactName, position, phoneNumber, email) => {
         e.preventDefault();
 
-        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/warehouses`, {
+        await axios.post(`http://localhost:8080/api/warehouses`, {
             warehouseName: warehouseName,
             streetAddress: streetAddress,
             city: city,
