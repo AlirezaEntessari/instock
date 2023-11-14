@@ -41,7 +41,7 @@ function WarehouseList( { warehouses } ) {
                     <div className="warehouseContainer__far">
                         <div className="warehouseContainer__far--align">
                             <img src={del} alt="delete" className='shrink__hidden' onClick={() => handleDelete(warehouse)}/>
-                            <img src={edit} alt="edit" className='shrink2__hidden'/>
+                            <Link to={`/warehouses/edit/${warehouse.id}`}><img src={edit} alt="edit" className='shrink2__hidden'/></Link>
                         </div>
                     </div>
                 </div>
