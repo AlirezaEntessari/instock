@@ -2,3 +2,70 @@
 @use './../../styles/assets/partials/fonts' as *;
 @use './../../styles/assets/partials/variables' as *;
 
+.inventory-container__top {
+    display: flex;
+    justify-content: space-between;
+    background-color: $instock-primary-3;
+    border-bottom: 1px solid $instock-secondary;
+}
+.inventory-container__top--one {
+    display: flex;
+    margin-top: 1.875rem;
+    margin-bottom: .9375rem;
+}
+.inventory-container__top--two {
+    margin-top: 1.875rem;
+    margin-bottom: 1.5625rem;
+    
+}
+.inventory-container__main {
+    display: flex;
+    justify-content: space-between;
+    background-color: $instock-primary-3;
+}
+.inventory-container__main--two {
+    display: flex;
+    flex-direction: column;
+}
+.inventory-container__right {
+    display: none;
+    @include tablet {
+        display: flex;
+    flex-direction: column;
+    }
+}
+.inventory-container__descript {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.inventory-container__cat {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5625rem;
+}
+.inventory-container__status {
+    margin-bottom: 1.5625rem;
+}
+.inventory-container__ware {
+    margin-bottom: 1.5625rem;
+}
+.inventory-container__qty {
+    margin-top: 5.625rem;
+}
+.inventory-container__hide
+.top__text {
+    font-size: 1.5rem;
+    margin-top: .3125rem;
+    margin-left: .3125rem;
+}
+h4 {
+    font-size: .875rem;
+}
+button {
+    border-radius: 1.25rem;
+    border: none;
+    background-color: $instock-primary-2;
+    color: $instock-primary-3;
+    width: 4.375rem;
+    height: 1.875rem;
+}
